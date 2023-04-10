@@ -45,7 +45,12 @@ body{
   font-size: 1.5rem;
   font-weight: 700;
 }
-
+.icon-container svg{
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 1.5rem;
+  
+}
 
 .site-title{
   font-size: 2rem;
