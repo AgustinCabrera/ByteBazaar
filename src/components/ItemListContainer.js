@@ -2,6 +2,7 @@ import  { useState, useEffect } from 'react'
 import { getProducts } from '../assets/data'
 import { useParams } from 'react-router-dom'
 import { getProductsByCategory } from '../assets/data'
+import Item from './item/item'
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -25,8 +26,9 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <div>
       <h2>{greeting}</h2>
-      <ItemListContainer products={products} />
+      {products.map((prod) => (
+        <Item id={prod.id} name={prod.title} price={prod.price} stock={prod.stock} img={prod.img} />))}
     </div>
   )
 }
-export default ItemListContainer;
+export default ItemListContainer
