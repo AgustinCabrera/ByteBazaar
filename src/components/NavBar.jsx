@@ -1,24 +1,15 @@
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
-export default function NavBar() {
+import React from 'react';
+import './NavBar.css';
+
+export const NavBar = () => {
     return(
-    <nav className="nav">
-        <a href='/' className="site-title">ByteBazaar</a> 
-        <ul className='nav__list'>
-            <li>
-                <a className='cart-widget' href='/cart-widget'>
-                    <CartWidget />
-                </a>
-            </li>
-            <li>
-                <a href='/about'>About</a>
-            </li>
-                <li>
-                <a href='/contact'>Contact</a>
-                </li>
-            <li>
-                <a href='/login'>Login</a>
-            </li>
-        </ul>
-    </nav>
-    )
-}
+    <div className="navbar">
+        <div className="Links" >
+            <Link to="/">Shop</Link>
+            <Link to="/cart"><CartWidget/></Link>
+        </div>
+    </div>
+    );
+};
